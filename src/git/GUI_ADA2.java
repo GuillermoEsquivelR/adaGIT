@@ -7,6 +7,7 @@ import java.awt.Font;
 import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
+import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 import javax.swing.JTextField;
 import javax.swing.border.EmptyBorder;
@@ -94,6 +95,24 @@ public class GUI_ADA2 extends JFrame {
 		contentPane.add(btnGuardar);
 		
 		JButton btnBuscar = new JButton("Buscar");
+		btnBuscar.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				boolean encontrado = false;
+				String nombreBuscar = JOptionPane.showInputDialog("Fruta a buscar");
+				for (int i=0; i<listaFrutas.size(); i++) {
+					if (listaFrutas.get(i).getNombre().equals(nombreBuscar)) {
+						encontrado = true;
+					} //if
+					}
+				if (encontrado == true) {
+					JOptionPane.showMessageDialog(null, "La fruta " + nombreBuscar + " sí se encuentra en la lista");
+				}
+				else {
+					JOptionPane.showMessageDialog(null, "La fruta " + nombreBuscar + " no se encontró");
+				}
+				}	
+			}
+		);
 		btnBuscar.setFont(new Font("Tahoma", Font.PLAIN, 15));
 		btnBuscar.setBounds(317, 315, 128, 40);
 		contentPane.add(btnBuscar);
