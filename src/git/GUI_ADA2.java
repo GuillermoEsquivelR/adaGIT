@@ -91,7 +91,7 @@ public class GUI_ADA2 extends JFrame {
 			}
 		});
 		btnGuardar.setFont(new Font("Tahoma", Font.PLAIN, 15));
-		btnGuardar.setBounds(152, 315, 137, 40);
+		btnGuardar.setBounds(53, 315, 137, 40);
 		contentPane.add(btnGuardar);
 		
 		JButton btnBuscar = new JButton("Buscar");
@@ -109,13 +109,22 @@ public class GUI_ADA2 extends JFrame {
 				}
 				else {
 					JOptionPane.showMessageDialog(null, "La fruta " + nombreBuscar + " no se encontró");
-				}
+					}
 				}	
 			}
 		);
 		btnBuscar.setFont(new Font("Tahoma", Font.PLAIN, 15));
-		btnBuscar.setBounds(317, 315, 128, 40);
+		btnBuscar.setBounds(221, 315, 128, 40);
 		contentPane.add(btnBuscar);
+		
+		JButton btnEliminar = new JButton("Eliminar");
+		btnEliminar.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+			}
+		});
+		btnEliminar.setFont(new Font("Tahoma", Font.PLAIN, 15));
+		btnEliminar.setBounds(391, 315, 128, 40);
+		contentPane.add(btnEliminar);
 		
 		
 		
@@ -127,5 +136,4 @@ public class GUI_ADA2 extends JFrame {
 		
 		
 	}
-
 }
