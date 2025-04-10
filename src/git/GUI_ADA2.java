@@ -10,6 +10,7 @@ import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.JTextField;
 import javax.swing.border.EmptyBorder;
+import java.util.ArrayList;
 
 public class GUI_ADA2 extends JFrame {
 
@@ -44,43 +45,45 @@ public class GUI_ADA2 extends JFrame {
 		setContentPane(contentPane);
 		contentPane.setLayout(null);
 		
-		JTextField txt1 = new JTextField();
-		txt1.setBounds(266, 102, 96, 19);
-		contentPane.add(txt1);
-		txt1.setColumns(10);
+		JTextField textNombre = new JTextField();
+		textNombre.setBounds(266, 95, 179, 26);
+		contentPane.add(textNombre);
+		textNombre.setColumns(10);
 		
-		JLabel lbl1 = new JLabel("Nombre:");
-		lbl1.setFont(new Font("Tahoma", Font.PLAIN, 20));
-		lbl1.setBounds(148, 95, 78, 25);
-		contentPane.add(lbl1);
+		JLabel lblNombre = new JLabel("Nombre:");
+		lblNombre.setFont(new Font("Tahoma", Font.PLAIN, 20));
+		lblNombre.setBounds(148, 95, 78, 25);
+		contentPane.add(lblNombre);
 		
-		JLabel lbl2 = new JLabel("Peso:");
-		lbl2.setFont(new Font("Tahoma", Font.PLAIN, 20));
-		lbl2.setBounds(148, 155, 49, 25);
-		contentPane.add(lbl2);
+		JLabel lblPeso = new JLabel("Peso:");
+		lblPeso.setFont(new Font("Tahoma", Font.PLAIN, 20));
+		lblPeso.setBounds(148, 155, 49, 25);
+		contentPane.add(lblPeso);
 		
-		JTextField txt2 = new JTextField();
-		txt2.setColumns(10);
-		txt2.setBounds(266, 155, 96, 19);
-		contentPane.add(txt2);
+		JTextField textPeso = new JTextField();
+		textPeso.setColumns(10);
+		textPeso.setBounds(266, 155, 179, 26);
+		contentPane.add(textPeso);
 		
-		JLabel lbl3 = new JLabel("Color:");
-		lbl3.setFont(new Font("Tahoma", Font.PLAIN, 20));
-		lbl3.setBounds(148, 223, 54, 25);
-		contentPane.add(lbl3);
+		JLabel lblColor = new JLabel("Color:");
+		lblColor.setFont(new Font("Tahoma", Font.PLAIN, 20));
+		lblColor.setBounds(148, 223, 54, 25);
+		contentPane.add(lblColor);
 		
-		JTextField textField = new JTextField();
-		textField.setColumns(10);
-		textField.setBounds(266, 223, 96, 19);
-		contentPane.add(textField);
+		JTextField textColor = new JTextField();
+		textColor.setColumns(10);
+		textColor.setBounds(266, 223, 179, 26);
+		contentPane.add(textColor);
 		
-		JButton btn1 = new JButton("Guardar");
-		btn1.setBounds(152, 315, 137, 40);
-		contentPane.add(btn1);
+		JButton btnGuardar = new JButton("Guardar");
+		btnGuardar.setFont(new Font("Tahoma", Font.PLAIN, 15));
+		btnGuardar.setBounds(152, 315, 137, 40);
+		contentPane.add(btnGuardar);
 		
-		JButton btn2 = new JButton("Buscar");
-		btn2.setBounds(317, 315, 128, 40);
-		contentPane.add(btn2);
+		JButton btnBuscar = new JButton("Buscar");
+		btnBuscar.setFont(new Font("Tahoma", Font.PLAIN, 15));
+		btnBuscar.setBounds(317, 315, 128, 40);
+		contentPane.add(btnBuscar);
 		
 		
 		
