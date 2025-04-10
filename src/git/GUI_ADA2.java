@@ -120,7 +120,19 @@ public class GUI_ADA2 extends JFrame {
 		JButton btnEliminar = new JButton("Eliminar");
 		btnEliminar.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-			}
+				boolean encontrado = false;
+				String nombreEliminar = JOptionPane.showInputDialog("Fruta a buscar");
+				for (int i=0; i<listaFrutas.size(); i++) {
+					if (listaFrutas.get(i).getNombre().equals(nombreEliminar)) {
+						encontrado = true;
+						if(encontrado == true) { 
+						listaFrutas.remove(i);
+						JOptionPane.showMessageDialog(null, "La fruta " + nombreEliminar + " se eliminó la lista");	
+						}
+				else {
+					JOptionPane.showMessageDialog(null, "La fruta " + nombreEliminar + " no se encontró");
+					}
+			}}}
 		});
 		btnEliminar.setFont(new Font("Tahoma", Font.PLAIN, 15));
 		btnEliminar.setBounds(391, 315, 128, 40);
