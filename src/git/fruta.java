@@ -1,13 +1,13 @@
 package git;
 
-public class nodo {
+public class fruta {
 	private String nombre;
 	private String peso;
 	private String color;
-	   public nodo siguiente;
-	   public nodo anterior;
+	   public fruta siguiente;
+	   public fruta anterior;
 	   
-	public nodo(String nombre, String peso, String color, nodo siguiente, nodo anterior) {
+	public fruta(String nombre, String peso, String color, fruta siguiente, fruta anterior) {
 		this.nombre = nombre;
 		this.peso = peso;
 		this.color = color;
