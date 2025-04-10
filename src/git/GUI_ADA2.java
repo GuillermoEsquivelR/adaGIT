@@ -11,11 +11,15 @@ import javax.swing.JPanel;
 import javax.swing.JTextField;
 import javax.swing.border.EmptyBorder;
 import java.util.ArrayList;
+import java.awt.event.ActionListener;
+import java.awt.event.ActionEvent;
 
 public class GUI_ADA2 extends JFrame {
 
 	private static final long serialVersionUID = 1L;
 	private JPanel contentPane;
+	ArrayList<fruta> listaFrutas = new ArrayList<>();
+	
 
 	/**
 	 * Launch the application.
@@ -76,6 +80,15 @@ public class GUI_ADA2 extends JFrame {
 		contentPane.add(textColor);
 		
 		JButton btnGuardar = new JButton("Guardar");
+		btnGuardar.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				String nombre = textNombre.getText();
+				String peso = textPeso.getText();
+				String color = textColor.getText();
+				fruta nuevaFruta = new fruta(nombre, peso, color);
+				listaFrutas.add(nuevaFruta);
+			}
+		});
 		btnGuardar.setFont(new Font("Tahoma", Font.PLAIN, 15));
 		btnGuardar.setBounds(152, 315, 137, 40);
 		contentPane.add(btnGuardar);
