@@ -151,18 +151,15 @@ public class GUI_ADA2 extends JFrame {
 		contentPane.add(lblGramos);
 		
 		JButton btnRecorrido = new JButton("Recorrido");
+		btnRecorrido.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				for (int i = 0; i < listaFrutas.size(); i++) {
+					JOptionPane.showMessageDialog(null, "Fruta: " + listaFrutas.get(i).getNombre() + "\nPeso: " + listaFrutas.get(i).getPeso() + "\nColor: " + listaFrutas.get(i).getColor());
+				}
+			}
+		});
 		btnRecorrido.setFont(new Font("Tahoma", Font.PLAIN, 15));
 		btnRecorrido.setBounds(481, 315, 137, 40);
-		contentPane.add(btnRecorrido);
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
+		contentPane.add(btnRecorrido);	
 	}
 }
