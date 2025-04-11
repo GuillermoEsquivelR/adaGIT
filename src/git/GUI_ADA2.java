@@ -14,6 +14,7 @@ import javax.swing.border.EmptyBorder;
 import java.util.ArrayList;
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
+import javax.swing.SwingConstants;
 
 public class GUI_ADA2 extends JFrame {
 
@@ -43,7 +44,7 @@ public class GUI_ADA2 extends JFrame {
 	 */
 	public GUI_ADA2() {
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		setBounds(100, 100, 642, 450);
+		setBounds(100, 100, 657, 450);
 		contentPane = new JPanel();
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 
@@ -91,7 +92,7 @@ public class GUI_ADA2 extends JFrame {
 			}
 		});
 		btnGuardar.setFont(new Font("Tahoma", Font.PLAIN, 15));
-		btnGuardar.setBounds(53, 315, 137, 40);
+		btnGuardar.setBounds(23, 315, 137, 40);
 		contentPane.add(btnGuardar);
 		
 		JButton btnBuscar = new JButton("Buscar");
@@ -114,7 +115,7 @@ public class GUI_ADA2 extends JFrame {
 			}
 		);
 		btnBuscar.setFont(new Font("Tahoma", Font.PLAIN, 15));
-		btnBuscar.setBounds(221, 315, 128, 40);
+		btnBuscar.setBounds(181, 315, 128, 40);
 		contentPane.add(btnBuscar);
 		
 		JButton btnEliminar = new JButton("Eliminar");
@@ -135,8 +136,24 @@ public class GUI_ADA2 extends JFrame {
 			}}}
 		});
 		btnEliminar.setFont(new Font("Tahoma", Font.PLAIN, 15));
-		btnEliminar.setBounds(391, 315, 128, 40);
+		btnEliminar.setBounds(329, 315, 128, 40);
 		contentPane.add(btnEliminar);
+		
+		JLabel lblFrutas = new JLabel("Frutas");
+		lblFrutas.setHorizontalAlignment(SwingConstants.CENTER);
+		lblFrutas.setFont(new Font("Tahoma", Font.PLAIN, 40));
+		lblFrutas.setBounds(148, 10, 298, 40);
+		contentPane.add(lblFrutas);
+		
+		JLabel lblGramos = new JLabel("Gramos (g)");
+		lblGramos.setFont(new Font("Tahoma", Font.PLAIN, 15));
+		lblGramos.setBounds(455, 156, 89, 24);
+		contentPane.add(lblGramos);
+		
+		JButton btnRecorrido = new JButton("Recorrido");
+		btnRecorrido.setFont(new Font("Tahoma", Font.PLAIN, 15));
+		btnRecorrido.setBounds(481, 315, 137, 40);
+		contentPane.add(btnRecorrido);
 		
 		
 		
